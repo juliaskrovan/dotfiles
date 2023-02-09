@@ -4,11 +4,10 @@ echo -e "`bash --version`"
 echo -ne "Uptime: "; uptime
 echo -ne "Server time is: "; date
 
-FILE=$HOME/.bashrc
-if  [ -f "$FILE" ] ; then
+if [[ -f $HOME/.bashrc ]] 
+then
     source ~/.bash_profile
-else
-    echo "$FILE does not exist"
+else echo "This file does not exist"
 fi
 
 set -o vi
